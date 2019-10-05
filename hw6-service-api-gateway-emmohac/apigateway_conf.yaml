@@ -1,0 +1,75 @@
+gatewayConfig:
+  scheme: http://
+  hostName: 127.0.0.1
+  port: 2328
+  path: /api/g
+  numThreads: 5
+  requestDelay: 500
+
+loggerConfig:
+  outputDir: ./logs/
+  outputFile: gateway.log
+
+databaseConfig:
+  dbConnections: 3
+  dbUsername: cs122b_db139
+  dbPassword: tz16mN~zXXQM
+  dbHostname: localhost
+  dbPort: 3310
+  dbDriver: com.mysql.cj.jdbc.Driver
+  dbName: cs122b_db139
+  dbSettings: ?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+
+idmConfig:
+  scheme: http://
+  hostName: 127.0.0.1
+  port: 2325
+  path: /api/idm
+
+idmEndpoints:
+  EPUserRegister: /register
+  EPUserLogin: /login
+  EPSessionVerify: /session
+  EPUserPrivilegeVerify: /priviledge
+
+moviesConfig:
+  scheme: http://
+  hostName: 127.0.0.1
+  port: 2327
+  path: /api/movies
+
+moviesEndpoints:
+  EPMovieSearch: /search
+  EPMovieGet: /get/{movieid}
+  EPMovieAdd: /add
+  EPMovieDelete: /delete/{movieid}
+  EPGenreGet: /genre
+  EPGenreAdd: /genre/add
+  EPGenreMovie: /genre/{movieid}
+  EPStarSearch: /star/search
+  EPStarGet: /star/{starid}
+  EPStarAdd: /star/add
+  EPStarIn: /star/starin
+  EPRating: /rating
+
+billingConfig:
+  scheme: http://
+  hostName: 127.0.0.1
+  port: 2326
+  path: /api/billing
+
+billingEndpoints:
+  EPCartInsert: /cart/insert
+  EPCartUpdate: /cart/update
+  EPCartDelete: /cart/delete
+  EPCartRetrieve: /cart/retrieve
+  EPCartClear: /cart/clear
+  EPCcInsert: /creditcard/insert
+  EPCcUpdate: /creditcard/update
+  EPCcDelete: /creditcard/delete
+  EPCcRetrieve: /creditcard/retrieve
+  EPCustomerInsert: /customer/insert
+  EPCustomerUpdate: /customer/update
+  EPCustomerRetrieve: /customer/retrieve
+  EPOrderPlace: /order/place
+  EPOrderRetrieve: /order/retrieve

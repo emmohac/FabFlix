@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+
+  <link rel="stylesheet" href="css\style.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js\index.js" type="text/javascript" defer="defer"></script>
+  <script src="js\time.js" type="text/javascript" defer="defer"></script>
+
+  <title>Huy Minh Tran</title>
+</head>
+<body onload="startTime()">
+<div class="header">
+  <h1><b>Welcome To FabFlix</b></h1>
+  <h4><b>*Fap fap and Netflix</b></h4>
+</div>
+
+<div class="tab">
+  <button id="advancedSearch">Movie Search</button>
+  <button id="regLogUser">Register/Login</button>
+  <button id="userOrderHistory">Order History</button>
+    <div id="welcome" style="text-align: right; color: whitesmoke; size: 24px;"></div>
+</div>
+
+<div class="row" >
+  <div class="side">
+    <h1 style="text-align: center;"><b>Shopping Cart</b></h1>
+    <div style="text-align: center;">
+        <img src="image\money.jpg" width="200" height="200"/>
+    </div>
+
+      <div class="shoppingcart" style="height: 400px; text-align: center">
+          This should show shopping cart.
+      </div>
+
+    <hr>
+
+    <div style="text-align: center;">
+        <form class="myCheckOut" action="#">
+            <input class="checkOut" type="submit" value="Check Out"/>
+            <input class="showCart" type="submit" value="Show Cart"/>
+            <input class="clearCart" type="submit" value="Clear"/>
+        </form>
+    </div>
+  </div>
+
+  <div class="main">
+
+      <div class="page">
+          
+      </div>
+
+      <div style='text-align: center;' class="error">
+          <p>Display message here.</p>
+      </div>
+
+      <div style='text-align: center;' class="movies">
+          <p>Movie displays here...</p>
+      </div>
+
+      <div style="text-align: center" class="getMovies">
+          <p>getMovie display here</p>
+      </div>
+      
+  </div>
+</div>
+
+<div class="footer">
+    <p id="date">
+    <p id="txt"></p>
+</div>
+
+<script>
+  $("#date").text((new Date().toDateString()));
+</script>
+
+</body>
+</html>
+
